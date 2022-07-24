@@ -1,0 +1,34 @@
+@use '../../styles/helpers/helpers' as *;
+
+.navigation {
+  height: 4rem;
+  margin: 0 auto;
+  background: color('whiteShadeColor');
+  border-bottom: 1px solid color('darkGreyColor');
+  text-transform: capitalize;
+  max-width: $container-width;
+
+  .navList {
+    @include flexBox;
+    @include flexProperty(flex-start, center);
+    gap: 2rem;
+    height: 100%;
+  }
+
+  .navLink:nth-child(2) {
+    margin-left: auto;
+  }
+
+  .navLink {
+    height: 100%;
+    @include flexBox;
+    @include flexProperty(center, center);
+    box-sizing: content-box;
+    padding: 0 1rem;
+  }
+
+  .activeNavLink {
+    font-weight: 600;
+    border-bottom: 3px solid color('darkGreyColor');
+  }
+}

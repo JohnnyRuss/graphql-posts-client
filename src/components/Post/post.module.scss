@@ -1,0 +1,12 @@
+@use '../../styles/helpers/helpers' as *;
+
+.post {
+  max-width: $container-width;
+  margin: 0 auto;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
+  align-items: center;
+  gap: 5rem;
+}

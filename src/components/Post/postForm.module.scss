@@ -1,0 +1,38 @@
+@use '../../styles/helpers/helpers' as *;
+
+.form {
+  grid-area: 2 / 2 / 3 / -1;
+  padding: 2rem;
+  @include boxShadowBlack(1rem, 3rem, 0.2);
+
+  .formHeading {
+    margin-bottom: 2rem;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  .inputField {
+    @include flexBox;
+    @include flexProperty(flex-start, flex-start);
+    gap: 1.5rem;
+  }
+
+  .textArea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    height: 6rem;
+
+    @include scrollBar('&');
+  }
+
+  .createPostBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: teal;
+    color: white;
+  }
+}

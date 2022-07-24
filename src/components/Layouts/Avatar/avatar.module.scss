@@ -1,0 +1,10 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.avatar {
+  background: white url('../../../../public/assets/avatar.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: difference;
+  border-radius: 50%;
+}

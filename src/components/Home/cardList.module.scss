@@ -1,0 +1,9 @@
+@use '../../styles/helpers/helpers' as *;
+
+.cardList {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 40rem));
+  justify-content: center;
+  gap: 4rem 8rem;
+}

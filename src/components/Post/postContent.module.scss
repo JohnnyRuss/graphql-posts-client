@@ -1,0 +1,33 @@
+@use '../../styles/helpers/helpers' as *;
+
+.userFigure {
+  grid-area: 1 / 1 / -1 / 2;
+  width: 10rem;
+  height: 10rem;
+  align-self: start;
+}
+
+.postBox {
+  grid-area: 1 / 2 / 2 / -1;
+  @include flexBox(column);
+  padding: 2rem 3rem;
+  @include boxShadowBlack(1rem, 3rem, 0.2);
+
+  .userName {
+    text-transform: capitalize;
+    line-height: 1;
+  }
+
+  .timeAgo {
+    font-size: size('smallestSize');
+  }
+
+  .postText {
+    margin: 2rem 0 3rem 0;
+  }
+
+  .actionsBox {
+    @include flexBox;
+    gap: 2rem;
+  }
+}

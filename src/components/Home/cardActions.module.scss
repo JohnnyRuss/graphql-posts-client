@@ -1,0 +1,8 @@
+@use '../../styles/helpers/helpers' as *;
+
+.actionsBox {
+  grid-area: 3 / 1 / 4 / -1;
+  @include flexBox;
+  gap: 3rem;
+  align-self: center;
+}

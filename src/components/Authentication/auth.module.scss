@@ -1,0 +1,62 @@
+@use '../../styles/helpers/helpers' as *;
+
+.authForm {
+  max-width: $container-width;
+  margin: 0 auto;
+  margin-top: 4.5rem;
+  @include flexBox(column);
+  @include flexProperty(center, center);
+  gap: 2rem;
+
+  .heading {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
+
+  %border {
+    @include boxShadowBlack(0.5rem, 2rem, 0.25);
+    border: 1px solid rgba(128, 128, 128, 0.5);
+  }
+
+  .inputField {
+    @include flexBox(column);
+    @include flexProperty(center, center);
+    gap: 0.5rem;
+
+    .label {
+      text-transform: capitalize;
+      cursor: pointer;
+      align-self: flex-start;
+      font-size: size('smallerSize');
+      font-weight: 500;
+      padding-left: 1rem;
+    }
+
+    .input {
+      padding: 1rem 1rem;
+      border-radius: 0.7rem;
+      @extend %border;
+      width: 25rem;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+  }
+
+  .confirmBTN {
+    padding: 1rem 3rem;
+    border-radius: 0.7rem;
+    background: teal;
+    color: #fff;
+    text-transform: capitalize;
+    @extend %border;
+    transition: all 0.25s;
+    width: 25rem;
+
+    &:hover {
+      filter: brightness(115%);
+    }
+  }
+}

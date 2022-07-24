@@ -1,0 +1,7 @@
+@use '../../styles/helpers/helpers' as *;
+
+.commentsBox {
+  grid-area: 3 / 2 / 4 / -1;
+  @include flexBox(column);
+  gap: 2rem;
+}

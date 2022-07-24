@@ -1,0 +1,68 @@
+@use '../abstract/functions' as *;
+@use '../components/media' as *;
+@use '../components/components' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(tab-landscape) {
+    font-size: 56.25%; // 1rem == 9px
+  }
+
+  @include respond(tab-portrate) {
+    font-size: 50%; // 1rem == 8px
+  }
+
+  @include respond(large-desktop) {
+    font-size: 75%; // 1rem == 12px
+  }
+}
+
+body {
+  font-size: size('regullarSize');
+  font-weight: weight('regullarWeight');
+  line-height: 1.4;
+  font-family: 'Poppins', sans-serif;
+  background: color('whiteColor');
+  color: color('blackColor');
+}
+
+@include scrollBar('body');
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a,
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+
+::selection {
+  background: color('blackColor');
+  color: color('whiteColor');
+}

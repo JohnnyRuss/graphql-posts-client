@@ -1,0 +1,34 @@
+@use '../abstract/functions' as *;
+@use './animation' as *;
+
+@mixin scrollBar($element) {
+  #{$element} {
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #{$element}::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  #{$element}::-webkit-scrollbar-thumb {
+    background: color(blackColor);
+    border-radius: 1rem;
+  }
+
+  #{$element}::-webkit-scrollbar-track {
+    background: color(lightGreyColor);
+    border-radius: 2rem;
+  }
+}
+
+@mixin spinner {
+  animation: spinner 1s infinite;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,77 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.btn {
+  @include flexBox;
+  @include flexProperty(space-between, center);
+  width: 10rem;
+  height: 3rem;
+  border: 1px solid currentColor;
+  cursor: pointer;
+
+  & span {
+    @include flexBox;
+    @include flexProperty(center, center);
+    width: 50%;
+    height: 100%;
+
+    &:last-child {
+      position: relative;
+      border-left: 1px solid currentColor;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -0.6rem;
+        top: 0.95rem;
+        width: 1rem;
+        height: 1rem;
+        transform: rotateZ(45deg);
+        border-left: 1px solid currentColor;
+        border-bottom: 1px solid currentColor;
+        background: white;
+      }
+    }
+  }
+
+  &.likeBtn {
+    color: teal;
+
+    .btnContent {
+      color: black;
+      border-color: teal;
+      &::before {
+        border-color: teal;
+      }
+    }
+
+    .liked {
+      color: white;
+      background: teal;
+    }
+  }
+
+  &.commentBtn {
+    color: lime;
+
+    .btnContent {
+      color: black;
+      border-color: lime;
+      &::before {
+        border-color: lime;
+      }
+    }
+  }
+}
+
+.deleteBtn {
+  background: crimson;
+  color: white;
+  width: 4rem;
+  height: 3rem;
+  @include flexBox;
+  @include flexProperty(center, center);
+  font-size: size('bigSize');
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}

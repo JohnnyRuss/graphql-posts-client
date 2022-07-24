@@ -1,0 +1,11 @@
+@use '../../styles/helpers/helpers' as *;
+
+.card {
+  display: grid;
+  grid-template: 7rem min-content 3rem / repeat(1, 1fr min-content);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  @include boxShadowBlack(0rem, 1.5rem, 0.2);
+  cursor: grab;
+  animation: fadeIn 0.5s ease forwards;
+}

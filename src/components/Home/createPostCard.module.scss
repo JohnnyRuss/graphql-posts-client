@@ -1,0 +1,56 @@
+@use '../../styles/helpers/helpers' as *;
+
+.createPostCard {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  @include boxShadowBlack(0rem, 1.5rem, 0.2);
+  @include flexBox(column);
+  gap: 2rem;
+
+  .heading {
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+
+  .textArea {
+    resize: none;
+    width: 100%;
+    min-height: 10rem;
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    border-radius: 0.7rem;
+    outline: none;
+    scroll-margin: 4rem;
+
+    &::-webkit-scrollbar {
+      width: 0.7rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #212121;
+      border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      margin-block: 0.3rem;
+      background: #999;
+      border-radius: 1rem;
+    }
+  }
+
+  .sharePostBtn {
+    background: teal;
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    font-size: size('smallSize');
+
+    &:hover {
+      filter: brightness(115%);
+    }
+  }
+}
