@@ -1,6 +1,6 @@
-@use '../Variables/colors' as *;
-@use '../Variables/fontSize' as *;
-@use '../Variables/fontWeight' as *;
+@use '../variables/colors' as *;
+@use '../variables/fontSize' as *;
+@use '../variables/fontWeight' as *;
 
 @function color($color) {
   @return map-get($colors, $color);
